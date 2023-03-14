@@ -1,0 +1,10 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.card-section {
+  background: rgb(26, 26, 26, 0.8);
+  padding-bottom: 210px;
+}

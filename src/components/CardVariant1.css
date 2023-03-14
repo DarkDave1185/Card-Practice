@@ -1,0 +1,58 @@
+
+ 
+.practice-1.base {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.practice-1.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background: rgb(26, 26, 26);
+}
+.practice-1.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent,rgb(26, 26, 26));
+}
+.practice-1.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(90deg,#c87878 10%, transparent 10%, transparent 50%, #c87878 50%, #c87878 60%, transparent 60%, transparent 100%);
+    background-size: 40px 40px;
+    animation: animate 10s linear infinite;
+}
+.practice-1.box:hover {
+    animation: animate1 .5s linear infinite;
+}
+.style1 {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+}
+.style2 {
+    transform: rotate(90deg);
+    filter: hue-rotate(90deg);
+}
+.style3{
+    transform: rotate(180deg);
+    filter: hue-rotate(180deg);
+}
+.style4 {
+    transform: rotate(270deg);
+    filter: hue-rotate(270deg);
+}
+@keyframes animate {
+    0%{background-position: 0px;}
+    100%{background-position: 40px;}
+}
+@keyframes animate1 {
+    0%{background-position: 40px;}
+    100%{background-position: 0px;}
+}
