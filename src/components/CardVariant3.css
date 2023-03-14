@@ -1,0 +1,116 @@
+
+
+.practice-3.base {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.practice-3.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    background: rgb(26, 26, 26);
+}
+.practice-3.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent,rgb(26, 26, 26));
+}
+.practice-3.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg,#c87878 10%, transparent 10%, transparent 50%, #c87878 50%, #c87878 60%, transparent 60%, transparent 100%);
+    background-size: 40px 40px;
+    animation: animate 1s linear infinite;
+    border: 3px solid #a86565;
+
+}
+/* updated css */
+.practice-3.box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: red;
+    opacity: 15%;
+}
+.practice-3.box .box-title {
+    opacity: 0;
+    transition: opacity ease-in-out 1s;
+}
+.practice-3.box:hover .box-title {
+    opacity: 1;
+}
+.practice-3.style1 {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+}
+.practice-3.style2 {
+    transform: rotate(90deg);
+    filter: hue-rotate(90deg);
+}
+.practice-3.style2:hover {
+    transform: rotate(90deg);
+    filter: hue-rotate(90deg);
+}
+.practice-3.style3{
+    transform: rotate(180deg);
+    filter: hue-rotate(180deg);
+}
+.practice-3.style4 {
+    transform: rotate(270deg);
+    filter: hue-rotate(270deg);
+}
+@keyframes animate {
+    0%{background-position: 0px;}
+    100%{background-position: 40px;}
+}
+
+/* updated css */
+.practice-3.box-title {
+    background: rgb(168,101,101);
+    background: radial-gradient(circle, rgba(168,101,101,1) 0%, rgba(255,255,255,0.01) 75%);
+}
+.practice-3.box-title1 {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+.practice-3.box-title2 {
+    position: absolute;
+    top: 91px;
+    right: 0px;
+    transform: rotate(-90deg);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+.practice-3.box-title3 {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    transform: rotate(-180deg);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+.practice-3.box-title4 {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    transform: rotate(-180deg);
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
